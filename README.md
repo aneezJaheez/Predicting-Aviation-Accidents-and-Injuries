@@ -99,8 +99,15 @@ Some of the key features of the dataset inferred during the exploratory analysis
 
 </ol>
 
-For further insigts about the dataset and detailed visualizations, check out the [exploratory analysis notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Data_Extraction_Cleanup.ipynb)
-  
+For further insights about the dataset and detailed visualizations, check out the [exploratory analysis notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Data_Extraction_Cleanup.ipynb)
+
+## Predictions
+
+### Predicting Aircraft Damage using DTC
+
+### Predicting Injury Count using Linear Regression
+
+### Predicting Injury Severity using DTC
 
 ## Contributors
 * Aneez Ahmed Jaheezuddin
