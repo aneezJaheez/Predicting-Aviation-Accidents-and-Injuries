@@ -79,15 +79,24 @@ Some of the key features of the dataset inferred during the exploratory analysis
  <li>The dataset was heavily skewed, some examples of which include:</li>
  <ol>
   <li>Weather condition - VMC:IMC :: 13:1</li>
-
-
-
   <li>Injury Severity - Non-Fatal:Fatal:Incident :: 24:5:1</li>
   <li>Aircraft Damage - Substantial:Destroyed:Minor :: 25:4:1</li>
+
+![Weather Condition Percentages](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/skewed.png)
+
  </ol>
  <li>Most accidents took place during landing.</li>
+
+![Phase of Flight](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/PhaseOfFlight.png)
+
  <li>The injury severity has a strong correlation with the aircraft damage.</li>
+
+![Injury Severity and Aircraft Damage](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Injury%20Severity%20Aircraft%20Damage.png)
+
  <li>A negative correlation between the weather conditions and aircraft damage was observed.</li>
+
+![Weather Condition and Aircraft Damage](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Weather%20Condition%20and%20Aircraft%20Damage.png)
+
 </ol>
 
 For further insigts about the dataset and detailed visualizations, check out the [exploratory analysis notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Data_Extraction_Cleanup.ipynb)
