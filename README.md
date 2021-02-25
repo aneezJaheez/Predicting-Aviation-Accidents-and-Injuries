@@ -186,7 +186,7 @@ We then use a build the decision tree classifier with a depth of 4 to make predi
 
 ![Fatality Prediction DTC](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Injury%20Severity%20DTC.png?raw=true)
 
-#### For more details on the feature selection, models, and visualizations, please check out our [notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Prediction_Models.ipynb)
+#### For more details on the feature selection, models, and visualizations, please check out our [notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Prediction_Models.ipynb).
 
 ## The Team
 * Aneez Ahmed Jaheezuddin
