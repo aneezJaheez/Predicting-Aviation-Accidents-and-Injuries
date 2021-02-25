@@ -10,7 +10,7 @@
 * [Predictions](#Predictions)
   * [Predicting Aircraft Damage](#Predicting-Aircraft-Damage-using-DTC)
   * [Predicting Injury Count](#Predicting-Injury-Count-using-Linear-Regression)
-  * [Predicting Injury Severity](#Predicting-Injury-Severity-using-DCT)
+  * [Predicting Injury Severity](#Predicting-Injury-Severity-using-DTC)
 * [Contributors](#Contributors)
 
 ## Overview
@@ -105,9 +105,55 @@ For further insights about the dataset and detailed visualizations, check out th
 
 ### Predicting Aircraft Damage using DTC
 
+In this section, we attempt to predict the aircraft damage with the help of Scikit-Learn's Decision Tree Classifier model using the following attributes (X):
+* Altitude
+* Latitude
+* Longitude
+* Total Uninjured
+* Total Passengers
+
+We use these attributes to predict the "Aircraft Damage" (y)
+
+Since the dataset is heavily skewed, it presents the problem of minority classes. Hence, we use imbalanced-learn to oversample the records and balance the classes.
+
+```python
+
+#Near Miss instance for data balancing by oversampling minority classes
+nm = NearMiss()
+smk = SMOTETomek(random_state = 42)
+X_train, y_train = smk.fit_resample(X_train, y_train)
+```
+
+<br/>
+
+![Aircraft Damage Balancing](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Balanced%20Aircraft%20Damage.png?raw=true)
+
+After this we use a Decision Tree classifier with a depth of 4 to predict the aircraft damage as a function of the input attributes X. This results in a classification accuracy of 50% on the test set. To improve te accuracy we optimize the decision tree classifier with the help of Adaptive Boosting.
+
+```python
+AdaBoost = AdaBoostClassifier(base_estimator = dectree, 
+                              n_estimators = 175, learning_rate = 0.3)
+boostModel = AdaBoost.fit(X_train,y_train)
+
+pred = boostModel.predict(X_train)
+predictions = metrics.accuracy_score(y_train,pred)
+print("prediction accuracy of train set is: ",predictions*100,"%")
+
+pred = boostModel.predict(X_test)
+predictions = metrics.accuracy_score(y_test,pred)
+print("prediction accuracy of test set is: ",predictions*100,"%")
+```
+
+After boosting the decision tree, we achieve a classification accuracy of 68% on the testset.
+
+
 ### Predicting Injury Count using Linear Regression
 
+
+
 ### Predicting Injury Severity using DTC
+
+
 
 ## Contributors
 * Aneez Ahmed Jaheezuddin
