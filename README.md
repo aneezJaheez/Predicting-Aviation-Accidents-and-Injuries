@@ -69,9 +69,19 @@ For more information about how the cleanup was carried out and the reasoning beh
 Some of the key features of the dataset inferred during the exploratory analysis is as follows:
 <ol>
  <li>Shape of the dataset after cleaning : 12954 records × 15 attributes, of which 7 attributes are categorical</li>
+
+![Categorical attributes](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/catData.png)
+
+![Numerical attributes](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/numData.png)
+
+![Numerical Attributes summary](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/numDataSummary.png)
+
  <li>The dataset was heavily skewed, some examples of which include:</li>
  <ol>
   <li>Weather condition - VMC:IMC :: 13:1</li>
+
+
+
   <li>Injury Severity - Non-Fatal:Fatal:Incident :: 24:5:1</li>
   <li>Aircraft Damage - Substantial:Destroyed:Minor :: 25:4:1</li>
  </ol>
