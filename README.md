@@ -28,7 +28,7 @@ and other essential libraries which include Pandas, Numpy, Matplotlib, and Seabo
 
 ### Dataset Source
 
-The data used in this project has been adapted from [Kaggle](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses), a popular repository for community published datasets. The dataset contains records of air vehicles involved in aviation accidents. It also contains attributes holding information about the vehicle and other external factors that may have caused the accident.
+The data used in this project has been adapted from [Kaggle](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses), a popular repository for community published datasets. The dataset contains records of air vehicles involved in aviation accidents. It also contains attributes holding information about the vehicle and other external factors that may have caused the accident.  
 
 ![Dataset Attribute Definitions](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Dataset%20Attributes.png)
 
@@ -68,8 +68,7 @@ For more information about how the cleanup was carried out and the reasoning beh
 
 Some of the key features of the dataset inferred during the exploratory analysis is as follows:
 <ol>
- <li>Shape of the dataset after cleaning : 12954 records × 15 attributes, of which 7 attributes are categorical</li>
-
+ <li>Shape of the dataset after cleaning : 12954 records × 15 attributes, of which 7 attributes are categorical</li><br/>
 
 ![Categorical attributes](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/catData.png)
 
