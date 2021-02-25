@@ -11,7 +11,7 @@
   * [Predicting Aircraft Damage](#Predicting-Aircraft-Damage-using-DTC)
   * [Predicting Injury Count](#Predicting-Injury-Count-using-Linear-Regression)
   * [Predicting Injury Severity](#Predicting-Injury-Severity-using-DTC)
-* [Contributors](#Contributors)
+* [The Team](#The-Team)
 
 ## Overview
 A machine learning project that aims to predict injury severity, count, and aircraft damage of aviation accidents by analyzing historical accidents with data points such as altitude, location, aircraft type, and passenger count.
@@ -165,10 +165,30 @@ We then used linear regression to make predictions. However, the results were no
 
 ### Predicting Injury Severity using DTC
 
+Here we attempt to predict the injury severity for passengers onboard the aircraft with the help of the following features:
+* Altitude
+* Latitude
+* Longitude
+* Weather Condition
+* Total Passengers
 
+As you had seen earlier, the injury severity is heavily skewed with class imbalances. Hence, we use imbalanced-learn to balance the classes before building the model.
 
+```python
+nm = NearMiss()
+smk = SMOTETomek(random_state = 42)
+a_train, b_train = smk.fit_resample(a_train, b_train)
+```
 
-## Contributors
+![Fatality Balancing](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Fatality%20Balancing.png?raw=true)
+
+We then use a build the decision tree classifier with a depth of 4 to make predictions with an accuracy of 75% on the testset.  
+
+![Fatality Prediction DTC](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Injury%20Severity%20DTC.png?raw=true)
+
+#### For more details on the feature selection, models, and visualizations, please check out our [notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Prediction_Models.ipynb)
+
+## The Team
 * Aneez Ahmed Jaheezuddin
 * [You Zhi Min](https://github.com/zzzhimin)
 * [Yeong Wei Xian](https://github.com/wxiannnn)
