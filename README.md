@@ -128,7 +128,11 @@ X_train, y_train = smk.fit_resample(X_train, y_train)
 
 ![Aircraft Damage Balancing](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Balanced%20Aircraft%20Damage.png?raw=true)
 
-After this we use a Decision Tree classifier with a depth of 4 to predict the aircraft damage as a function of the input attributes X. This results in a classification accuracy of 50% on the test set. To improve te accuracy we optimize the decision tree classifier with the help of Adaptive Boosting.
+After this we use a Decision Tree classifier with a depth of 4 to predict the aircraft damage as a function of the input attributes X.  
+
+![Aircraft Damage Decision Tree](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Aircraft%20Damage%20DTC.png?raw=true)
+
+This results in a classification accuracy of 50% on the test set. To improve te accuracy we optimize the decision tree classifier with the help of Adaptive Boosting.
 
 ```python
 AdaBoost = AdaBoostClassifier(base_estimator = dectree, 
@@ -149,9 +153,18 @@ After boosting the decision tree, we achieve a classification accuracy of 68% on
 
 ### Predicting Injury Count using Linear Regression
 
+In this section, we attempt to predict the injury count (fatal, severe, and minor injuries) for a commercial aircraft accident using the following attributes:
+* Total Passengers
+* Altitude of the Aircraft
 
+Since the altitude was derived from land elevation and phase of flight, we hypothesized that these features would be captured with the use of altitude as a feature alone. Our subsequent trials confirmed this hypothesis.
+
+We then used linear regression to make predictions. However, the results were not encouraging with regard to the goodness of fit, variance, and MSE.  
+
+![Predicting Fatal Injury Count](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Supporting%20Images/Fatal%20Injury%20Prediction.png?raw=true)
 
 ### Predicting Injury Severity using DTC
+
 
 
 
