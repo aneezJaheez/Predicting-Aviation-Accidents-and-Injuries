@@ -70,7 +70,7 @@ Some of the key features of the dataset inferred during the exploratory analysis
 <ol>
  <li>Shape of the dataset after cleaning : 12954 records × 15 attributes, of which 7 attributes are categorical</li>
 
-<br>
+
 ![Categorical attributes](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/catData.png)
 
 ![Numerical attributes](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/numData.png)
@@ -83,23 +83,23 @@ Some of the key features of the dataset inferred during the exploratory analysis
   <li>Injury Severity - Non-Fatal:Fatal:Incident :: 24:5:1</li>
   <li>Aircraft Damage - Substantial:Destroyed:Minor :: 25:4:1</li>
 
-<br>
+
 ![Weather Condition Percentages](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/skewed.png)
 
  </ol>
  <li>Most accidents took place during landing.</li>
 
-<br>
+
 ![Phase of Flight](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/PhaseOfFlight.png)
 
  <li>The injury severity has a strong correlation with the aircraft damage.</li>
 
-<br>
+
 ![Injury Severity and Aircraft Damage](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Injury%20Severity%20Aircraft%20Damage.png)
 
  <li>A negative correlation between the weather conditions and aircraft damage was observed.</li>
 
-<br>
+
 ![Weather Condition and Aircraft Damage](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Weather%20Condition%20and%20Aircraft%20Damage.png)
 
 </ol>
