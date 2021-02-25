@@ -48,9 +48,9 @@ For more information about how the cleanup was carried out and the reasoning beh
 Some of the key features of the dataset inferred during the exploratory analysis is as follows:
 1. Shape of the dataset after cleaning : 12954 records × 15 attributes, of which 7 attributes are categorical
 2. The dataset was heavily skewed, some examples of which include:
-  * Weather condition - VMC:IMC :: 13:1
-  * Injury Severity - Non-Fatal:Fatal:Incident :: 24:5:1
-  * Aircraft Damage - Substantial:Destroyed:Minor :: 25:4:1
+  1. Weather condition - VMC:IMC :: 13:1
+  1. Injury Severity - Non-Fatal:Fatal:Incident :: 24:5:1
+  1. Aircraft Damage - Substantial:Destroyed:Minor :: 25:4:1
 3. Most accidents took place during landing
 4. The injury severity has a strong correlation with the aircraft damage.
 5. A negative correlation between the weather conditions and aircraft damage was observed.
