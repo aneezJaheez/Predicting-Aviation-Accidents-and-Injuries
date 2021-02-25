@@ -4,7 +4,7 @@
 * [Overview](#Overview)
 * [Libraries Used](#Libraries-Used)
 * [The Dataset](#The-Dataset)
-  * [Dataset Source](#Data-Source)
+  * [Dataset Source](#Dataset-Source)
   * [Cleaning the Dataset](#Cleaning-the-Dataset)
   * [Key Features](#Key-Features)
 * [Predictions](#Predictions)
@@ -30,6 +30,8 @@ and other essential libraries which include Pandas, Numpy, Matplotlib, and Seabo
 
 The data used in this project has been adapted from [Kaggle](https://www.kaggle.com/khsamaha/aviation-accident-database-synopses), a popular repository for community published datasets. The dataset contains records of air vehicles involved in aviation accidents. It also contains attributes holding information about the vehicle and other external factors that may have caused the accident.
 
+![Dataset Attribute Definitions](https://raw.githubusercontent.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/main/Supporting%20Images/Dataset%20Attributes.png)
+
 ### Cleaning the Dataset
 
 Some of the steps in the data cleaning process are highlighted below:
@@ -39,7 +41,26 @@ Some of the steps in the data cleaning process are highlighted below:
 4. Eliminating records with no flight phase, location, or passenger data since this is crucial in our predictions.
 5. Ensuring injury severity data matches the fatality data.
 6. Introducing the approximate aircraft altitude as a new attribute estimated using the elevation of land and the aircrafts phase of flight.
-7. Predicting missing weather condition data using existing attributes with a decision tree classifier.
+
+```python
+for index, row in aviationData.iterrows():
+    if(aviationData.at[index, 'Broad.Phase.of.Flight'] == 'CRUISE' or aviationData.at[index, 'Broad.Phase.of.Flight'] == 'MANEUVERING' or aviationData.at[index, 'Broad.Phase.of.Flight'] == 'GO-AROUND'):
+        if(aviationData.at[index, 'Purpose.of.Flight'] == 'PERSONAL'):
+            altitude = 12496.8 - aviationData.at[index, 'Altitude']
+            if(altitude > 0):
+                aviationData.at[index, 'Altitude'] = altitude
+        else:
+            altitude = 10972 - aviationData.at[index, 'Altitude']
+            if(altitude > 0):
+                aviationData.at[index, 'Altitude'] = altitude
+    
+    if(aviationData.at[index, 'Broad.Phase.of.Flight'] == 'APPROACH' or aviationData.at[index, 'Broad.Phase.of.Flight'] == 'DESCENT' or aviationData.at[index, 'Broad.Phase.of.Flight'] == 'CLIMB'):
+        altitude = 700 - aviationData.at[index, 'Altitude']
+        if(altitude > 0):
+            aviationData.at[index, 'Altitude'] = altitude
+```
+
+8. Predicting missing weather condition data using existing attributes with a decision tree classifier.
 
 For more information about how the cleanup was carried out and the reasoning behind each step, check out our [notebook](https://github.com/aneezJaheez/Predicting-Aviation-Accidents-and-Injuries/blob/main/Notebooks/Data_Extraction_Cleanup.ipynb)
 
